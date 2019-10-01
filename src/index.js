@@ -1,13 +1,15 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
-
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
 import store from './store'
-import { addArticle } from './actions'
 
-import './index.css'
+import App from './components/App'
+import GlobalStyles from './styles/GlobalStyles'
 
-window.store = store
-window.addArticle = addArticle
-
-ReactDOM.render(<App />, document.getElementById('root'))
+render(
+  <Provider store={store}>
+    <GlobalStyles />
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+)
