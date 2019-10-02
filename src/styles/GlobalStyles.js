@@ -38,6 +38,10 @@ const GlobalStyles = createGlobalStyle`
     color: #09d3ac;
   }
 
+  button {
+    background: transparent;
+    border: 0;
+  }
 `
 
 export default GlobalStyles

@@ -73,6 +73,10 @@ const Form = ({ addArticle }) => {
   )
 }
 
+Form.propTypes = {
+  addArticle: PropTypes.func,
+}
+
 export default connect(
   null,
   mapDispatchToProps,

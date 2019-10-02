@@ -1,2 +1,4 @@
 export const ADD_ARTICLE = 'ADD_ARTICLE'
 export const FOUND_FORBIDDEN_WORD = 'FOUND_FORBIDDEN_WORD'
+export const FACTS_LOADED = 'FACTS_LOADED'
+export const SWAP = 'SWAP'
