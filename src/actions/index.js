@@ -26,16 +26,15 @@ export function foundForbiddenWord(payload) {
   }
 }
 
-export async function getFacts() {
-  const res = await fetch('https://cat-fact.herokuapp.com/facts', {
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-    },
-  })
-  const payload = await res.json()
-  return {
-    type: FACTS_LOADED,
-    payload,
+export function getJoke() {
+  return dispatch => {
+    fetch('https://icanhazdadjoke.com/', {
+      mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then(res => res.json())
+      .then(payload => dispatch({ type: FACTS_LOADED, payload }))
   }
 }

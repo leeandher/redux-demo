@@ -7,8 +7,8 @@ import {
 
 const initialState = {
   articles: [],
-  facts: [],
-  setting: 'ARTICLES',
+  joke: {},
+  setting: 'JOKE',
 }
 
 function rootReducer(state = initialState, action) {
@@ -25,7 +25,7 @@ function rootReducer(state = initialState, action) {
       const swapTo = action.payload.setting
       return { ...state, setting: swapTo }
     case FACTS_LOADED:
-      return { ...state, facts: [...action.payload] }
+      return { ...state, joke: action.payload }
     default:
       return state
   }

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Swapper from './Swapper'
 import List from './List'
 import Form from './Form'
-import Facts from './Facts'
+import Jokes from './Jokes'
 
 const mapStateToProps = ({ setting }) => {
   return { setting }
@@ -22,7 +22,7 @@ const App = ({ setting }) => {
             <List />
           </>
         ) : (
-          <Facts />
+          <Jokes />
         )}
       </header>
     </div>
